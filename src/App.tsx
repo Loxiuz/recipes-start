@@ -16,6 +16,7 @@ export default function App() {
   return (
     <Layout>
       <Routes>
+        <Route path="*" element={<h2>Not Found</h2>} />
         <Route path="/" element={<Home />} />
         <Route path="/categories/" element={<Categories />} />
         <Route path="/recipes" element={<RecipesLayout />}>

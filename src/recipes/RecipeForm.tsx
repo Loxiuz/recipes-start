@@ -22,7 +22,7 @@ const EMPTY_RECIPE = {
 export default function RecipeForm() {
   const [categories, setCategories] = useState([""]);
   //const recipeToEdit = useLocation().state || null;
-  const recipeToEdit = null;
+  const recipeToEdit = useLocation().state || null;
   //const [formData, setFormData] = useState<Recipe>(recipeToEdit || EMPTY_RECIPE);
   const [formData, setFormData] = useState<Recipe>(
     recipeToEdit || EMPTY_RECIPE

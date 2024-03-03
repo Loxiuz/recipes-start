@@ -21,9 +21,7 @@ const EMPTY_RECIPE = {
 
 export default function RecipeForm() {
   const [categories, setCategories] = useState([""]);
-  //const recipeToEdit = useLocation().state || null;
   const recipeToEdit = useLocation().state || null;
-  //const [formData, setFormData] = useState<Recipe>(recipeToEdit || EMPTY_RECIPE);
   const [formData, setFormData] = useState<Recipe>(
     recipeToEdit || EMPTY_RECIPE
   );
@@ -40,11 +38,11 @@ export default function RecipeForm() {
     }));
   };
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // e.preventDefault();
-    // if (formData.id) {
-    //   deleteRecipe(Number(formData.id));
-    //   setFormData({ ...EMPTY_RECIPE });
-    // }
+    e.preventDefault();
+    if (formData.id) {
+      deleteRecipe(Number(formData.id));
+      setFormData({ ...EMPTY_RECIPE });
+    }
   };
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {

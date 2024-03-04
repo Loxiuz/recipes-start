@@ -4,12 +4,12 @@ import Recipe from "./recipes/Recipe";
 import Recipes from "./recipes/RecipeList";
 import RecipeForm from "./recipes/RecipeForm";
 import Login from "./security/Login";
-//import Logout from "./security/_Logout";
 import Layout from "./Layout";
 import Home from "./Home";
 import "./App.css";
 import Contact from "./Contact";
 import RecipesLayout from "./recipes/RecipesLayout";
+import Logout from "./security/Logout";
 
 export default function App() {
   //const auth = useAuth();
@@ -25,8 +25,8 @@ export default function App() {
         </Route>
         <Route path="/add" element={<RecipeForm />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/logout" element={<Logout />} /> */}
       </Routes>
     </Layout>
   );
